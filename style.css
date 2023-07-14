@@ -1,0 +1,265 @@
+body {
+     margin-top: 0px;
+     margin-right: 0px;
+     margin-bottom: 0px;
+     margin-left: 0px;
+}
+
+.body-grid-container {
+     display: grid;
+     grid-template: repeat(5, 1fr) / repeat(5, 1fr);
+
+     height: 100vh;
+     width: 100vw;
+     background-color: #121212;
+     color: #fff1f2;
+}
+
+/* sidebar */
+.sidebar-grid-container {
+     grid-row: 1 / 6;
+
+     padding: 0rem 1rem;
+     background-color: #4c0519;
+     text-align: left;
+     font-size: 28px;
+
+     display: grid;
+     grid-template-rows: 10% 30% 20%;
+     grid-template-columns: auto;
+     gap: 5%;
+}
+
+.sidebar-grid-container .dashboard-head {
+     margin: none;
+     display: flex;
+     align-items: center;
+     justify-content: left;
+     font-size: 48px;
+     line-height: 0;
+     padding-left: 1rem;
+     gap: 2rem;
+}
+
+.sidebar-grid-container > .middle {
+     display: grid;
+     grid-template-rows: repeat(6, 1fr);
+     gap: 0.8rem;
+     padding-left: 2rem;
+}
+
+.sidebar-grid-container > .bottom {
+     display: grid;
+     grid-template-rows: repeat(auto, 1fr);
+     gap: 0.8rem;
+     padding-left: 2rem;
+     padding-top: 4rem;
+}
+
+.dashboard-button {
+     display: flex;
+     align-items: center;
+     gap: 12%;
+}
+
+.sidebar-grid-container > div > a {
+     text-decoration: none;
+     color: #fff1f2;
+}
+
+/* header */
+.header-grid-container {
+     grid-column: 2 / 6;
+
+     background-color: #262626;
+
+     display: grid;
+     grid-template-rows: 40% 60%;
+     grid-template-columns: 60% 40%;
+     padding: 0.5rem 2rem;
+}
+
+.header-search {
+     display: flex;
+     justify-content: left;
+     align-items: center;
+     gap: 1rem;
+     position: relative;
+}
+
+.header-search input {
+     padding: 0.5rem 0.5rem 0.5rem 3.5rem;
+     border-radius: 40px;
+     width: 100%;
+     font-weight: 600;
+     font-size: 18px;
+     position: absolute;
+}
+
+.header-search a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 38.59px;
+     padding-left: 0.5rem;
+     padding-right: 0.3rem;
+     position: absolute;
+}
+
+.form-control:focus {
+     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #881337;
+     border: 1px solid #4c0519;
+}
+
+.header-profile {
+     display: flex;
+     justify-content: right;
+     align-items: center;
+     padding-right: 2.3rem;
+     gap: 7%;
+}
+
+.header-profile a {
+     text-decoration: none;
+     color: #fff1f2;
+}
+
+.header-profile .bell svg:hover {
+     transition: 0.5s;
+     transform: scale(1.25);
+}
+
+.header-buttons {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     gap: 40px;
+}
+
+.header-buttons a {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     text-align: center;
+     text-decoration: none;
+     font-size: 18px;
+     font-weight: 700;
+     background-color: #4c0519;
+     border-radius: 20px;
+     color: #fff1f2;
+     width: 25%;
+     height: 35%;
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.993);
+}
+
+.header-welcome {
+     display: flex;
+     align-items: center;
+     justify-content: left;
+     gap: 5%
+}
+
+.right {
+     font-weight: 600;
+     font-size: 18px;
+}
+
+.right h3 {
+     line-height: 0.5;
+     font-size: 36px;
+}
+
+/* main */
+.main-grid-container {
+     grid-area: 2 / 2 / 6 / 6;
+
+     padding: 2rem 1.3rem; 
+     box-shadow: inset 0 7px 9px -7px rgba(0, 0, 0, 0.993);
+
+     display: grid;
+     grid-template-rows: repeat(3, 1fr);
+     grid-template-columns: 1fr 1fr 1fr;
+     gap: 2rem;
+}
+
+.projects-grid {
+     grid-area: 1 / 1 / 4 / 3;
+
+     display: grid;
+     grid-template-rows: 10px 27% 27% 27%;
+     grid-template-columns: 1fr 1fr;
+
+     text-align: center;
+     gap: 2rem;
+}
+
+.projects-grid > h4 {
+     grid-area: 1 / 1 / 1 / 3;
+     text-align: left;
+}
+
+/* individual boxes */
+.projects-grid > div {
+     text-align: left;
+     border-radius: 15px;
+     background-image: -webkit-linear-gradient(left, #881337, #881337 0.7rem, transparent 0.7rem, transparent 100%);
+     background-color: #262626;
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.993);
+     padding: 1.5rem;
+}
+
+.projects-grid > div:hover {
+     transition: 0.5s;
+     transform: scale(1.01);
+     cursor: pointer;
+}
+
+/* announcements */
+.announcements {
+     display: grid;
+     grid-template-rows: 20px 1fr;
+     gap: 1.5rem;
+}
+
+.announcements-grid {
+     padding: 1rem;
+     background-color: #262626;
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.993);
+     border-radius: 15px;
+     /* height: min-content; */
+
+     display: flex;
+     flex-direction: column;
+     gap: 1.5rem;
+}
+
+.announcements > h4 {
+     height: 20px;
+}
+
+/* trending */
+.trending {
+     display: grid;
+     grid-template-rows: 20px 1fr;
+     gap: 1rem;
+}
+
+.trending-grid {
+     display: grid;
+     grid-template-rows: 1fr 1fr 1fr 1fr;
+
+     padding: 1rem;
+     background-color: #262626;
+     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.993);
+     border-radius: 15px;
+}
+
+.trending-grid a {
+     text-decoration: none;
+     color: #fff1f2;
+
+     display: flex;
+     align-items: center;
+     gap: 1rem;
+}
